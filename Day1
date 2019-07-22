@@ -1,31 +1,31 @@
 import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
+import java.text.*;
+import java.math.*;
 import java.util.regex.*;
 
-public class Day3 {
-
-    private static final Scanner scanner = new Scanner(System.in);
+public class Day1 {
 
     public static void main(String[] args) {
-        int N = scanner.nextInt();
-        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        int i = 4;
+        double d = 4.0;
+        String s = "HackerRank ";
 
+        Scanner scan = new Scanner(System.in);
 
-        String answer;
-        if(N%2==1) {
-            answer = "Weird";
-        } else if (N >= 6 && N <= 20) {
-            answer = "Weird";
-        } else {
-            answer = "Not Weird";
-        }
-        System.out.println(answer);
+        int i1;
+        double d1;
+        String s1;
 
+        i1=scan.nextInt();
+        d1=scan.nextDouble();
+        scan.nextLine();
+        s1=scan.nextLine();
 
-        scanner.close();
+        System.out.println(i1+i);
+        System.out.println(d1+d);
+        System.out.println(s+s1);
+
+        scan.close();
     }
 }
