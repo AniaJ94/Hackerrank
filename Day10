@@ -1,0 +1,45 @@
+import java.util.*;
+
+public class Day10 {
+
+    static List binary (int n, List list){
+        while (n>0){
+            int remainder = n%2;
+            n=n/2;
+            list.add(remainder);
+        }
+        Collections.reverse(list);
+        return list;
+    }
+
+    static int maximum (List list, int count, int max){
+        for (int i=0; i<list.size(); i++){
+            Integer k = (Integer)list.get(i);
+            if (k == 0){
+                count=0;
+            }
+            else {
+                count++;
+                if (count>max)
+                    max=count;
+            }
+        }
+        return max;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        List list = new ArrayList();
+        int n = scanner.nextInt();
+        int count=0;
+        int max=0;
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+        List binar = binary(n, list);
+        int maxim = maximum(list, count, max);
+
+        System.out.println(maxim);
+
+        scanner.close();
+    }
+}
